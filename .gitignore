@@ -1,0 +1,11 @@
+# npm packages
+node_modules
+
+# mac file
+.DS_Store
+
+# env file
+.env
+
+#dist
+dist/
