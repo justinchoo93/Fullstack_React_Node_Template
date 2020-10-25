@@ -4,8 +4,9 @@
   "description": "react webpack node express boilerplate and basic config",
   "main": "index.js",
   "scripts": {
-    "build": "cross-env NODE_ENV=production webpack",
-    "dev": "concurrently \"nodemon ./server/server/js\" \"webpack-dev-server --open --inline --colors --hot --mode NODE_ENV=development\"",
+    "start": "node server/server.js",
+    "build": "webpack --mode production",
+    "dev": "concurrently \"nodemon ./server/server.js\" \"webpack serve --open --inline --color --hot --mode development\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
