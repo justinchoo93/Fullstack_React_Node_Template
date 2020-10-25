@@ -29,6 +29,16 @@ module.exports = {
       'react-dom': '@hot-loader/react-dom',
     },
   },
+  devServer: {
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
+    contentBase: path.join(__dirname, 'dist'),
+    overlay: {
+      warnings: true,
+      errors: true,
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: `./public/index.html`,
