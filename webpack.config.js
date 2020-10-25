@@ -1,4 +1,5 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: ['react-hot-loader/patch', './src/index.js'],
@@ -28,4 +29,9 @@ module.exports = {
       'react-dom': '@hot-loader/react-dom',
     },
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: `./public/index.html`,
+    }),
+  ],
 };
